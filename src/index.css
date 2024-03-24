@@ -1,0 +1,53 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* header styles */
+h1 {
+  padding-top: 40px;
+  padding-bottom: 25px;
+}
+
+/* button styles*/
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none; 
+  text-align: left;
+  width: 50px; 
+  height: 50px; 
+  border-radius: 25%;
+
+}
+
+/* input styles */
+input::placeholder {
+  text-align: left;
+  font-size: 20px;
+  padding-left: 15px;
+}
+
+input[type="text"] {
+  text-align: left;
+  border-radius: 8px;
+  border: none;
+  background-color: gainsboro;
+}
+
+.input {
+  margin-right: 10px;
+  height: 50px;
+  width:350px ;
+  border-radius: 15px;
+}
+
+/* wrapper class */
+.wrapper {
+  display: flex; 
+  justify-content: center;
+}

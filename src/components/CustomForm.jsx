@@ -3,6 +3,7 @@ import { useState } from "react";
 
 export const CustomForm = ({addTask}) => {
   const [task, setTask] = useState("");
+  
 
   const handleFormSubmit = (e) => {
       e.preventDefault();

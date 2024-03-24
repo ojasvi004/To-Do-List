@@ -1,0 +1,10 @@
+.tasks {
+  display: grid;
+  list-style-type: none;
+  gap: 1.5em;
+}
+.task-group {
+  display: flex;
+  align-items: center; /* Align items vertically centered */
+  justify-content: space-between; 
+}

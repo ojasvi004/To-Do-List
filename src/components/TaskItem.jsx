@@ -1,14 +1,15 @@
-import { useState } from 'react';
-import styles from './TaskItem.module.css';
-import { PencilSquareIcon  } from '@heroicons/react/24/outline';
-import { TrashIcon } from '@heroicons/react/24/outline';
+import { useState } from "react";
+import styles from "./TaskItem.module.css";
+import { PencilSquareIcon } from "@heroicons/react/24/outline";
+import { TrashIcon } from "@heroicons/react/24/outline";
 
-const TaskItem = ({task, deleteTask}) => {
+const TaskItem = ({ task, deleteTask, updateTask }) => {
   const [isChecked, setIsChecked] = useState(task.checked);
 
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
-  }
+    updateTask(task.id);
+  };
 
   return (
     <li className={styles.task}>
@@ -21,16 +22,12 @@ const TaskItem = ({task, deleteTask}) => {
           name={task.name}
           id={task.id}
         />
-        <label
-          htmlFor={task.id}
-          className={styles.label}
-        >
+        <label htmlFor={task.id} className={styles.label}>
           {task.name}
-          <p className={styles.checkmark}>
-          </p>
+          <p className={styles.checkmark}></p>
         </label>
         <button
-          className='btn2'
+          className="btn2"
           // onClick={}
         >
           <PencilSquareIcon width={24} height={24} />
@@ -38,12 +35,13 @@ const TaskItem = ({task, deleteTask}) => {
 
         <button
           className={`btn2 ${styles.delete}`}
-          onClick={() => deleteTask(task.id)}        >
+          onClick={() => deleteTask(task.id)}
+        >
           <TrashIcon width={24} height={24} />
         </button>
       </div>
     </li>
-  )
-}
+  );
+};
 
 export default TaskItem;

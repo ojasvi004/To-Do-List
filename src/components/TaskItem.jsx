@@ -1,6 +1,5 @@
 import { useState } from "react";
 import styles from "./TaskItem.module.css";
-import { PencilSquareIcon } from "@heroicons/react/24/outline";
 import { TrashIcon } from "@heroicons/react/24/outline";
 
 const TaskItem = ({ task, deleteTask, updateTask }) => {
@@ -24,15 +23,8 @@ const TaskItem = ({ task, deleteTask, updateTask }) => {
         />
         <label htmlFor={task.id} className={styles.label}>
           {task.name}
-          <p className={styles.checkmark}></p>
         </label>
-        <button
-          className="btn2"
-          // onClick={}
-        >
-          <PencilSquareIcon width={24} height={24} />
-        </button>
-
+     
         <button
           className={`btn2 ${styles.delete}`}
           onClick={() => deleteTask(task.id)}

@@ -1,10 +1,23 @@
 *,
-*::after,
-*::before {
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   text-align: center;
+  background-color: rgb(24, 10, 38);
+}
+
+body,
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  color: rgb(219, 218, 236);
+  font-size: 50px;
+  font-family: monospace;
 }
 
 .task {
@@ -16,66 +29,63 @@
 .task-group {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .label {
+  font-family: monospace;
   position: relative;
   cursor: pointer;
   text-align: left;
   line-height: 1.4;
   height: 50px;
   width: 350px;
-  background-color: gainsboro;
+  background-color: rgba(60, 44, 77, 0.568);
   padding-left: 10px;
-  margin-right: 40px;
   margin-left: 20px;
+  margin-right: 40px;
   margin-top: 20px;
   border-radius: 8px;
   font-size: 30px;
+  color: rgba(219, 218, 236, 0.613);
 }
 
-.checkbox {
+input[type="checkbox"] {
   width: 30px;
   height: 30px;
+  padding: 0.1rem;
 }
 
 .checkbox:focus {
   outline: none;
 }
 
-/* .checkbox:is(:focus-visible, :hover) {
-  box-shadow: 0 0 0 210px, 0 0 0 .05em hsl(210, 70%, 50%), 0 0 0 .225em hsla(210, 70%, 50%, 0.3);
-} */
-
-.checkmark {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 20px;
+.delete {
   display: grid;
   place-items: center;
+  background-color: rgb(254, 164, 164);
+  transition: background-color 0.3s ease;
+  margin-top: 21px;
 }
 
-.checkmark svg {
-  width: 15px;
-  height: 15px;
+.delete:hover {
+  background-color: rgba(255, 0, 0, 0.671);
+  color: white;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.76);
 }
 
-.checkbox:checked+label {
+.delete svg {
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+}
+
+.checkbox:checked + .label {
   text-decoration: line-through;
-}
-
-.delete {
-  --accent: 0, 70%, 50%;
 }
 
 .loading {
   color: hsl(210, 70%, 50%);
   font-size: 16px;
   font-weight: bold;
-}
-
-.btn2 {
-  margin-top: 20px;
-  margin-right: 10px;
 }

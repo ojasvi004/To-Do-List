@@ -24,7 +24,7 @@ export const CustomForm = ({addTask}) => {
             placeholder="Enter Task"
             id="task"
             className="input"
-            autoFocus
+            
             required
             maxLength={60}
             value={task}
@@ -33,8 +33,8 @@ export const CustomForm = ({addTask}) => {
           <label htmlFor="task" className="label">
           </label>
         </span>
-        <button className="btn" aria-label="Add Task" type="submit">
-          <PlusIcon style={{ color: "black" }} className="h-6 w-6" />
+        <button className="btn" type="submit">
+          <PlusIcon style={{ color: "gainsboro" }} className="h-6 w-6" />
         </button>
       </div>
     </form>

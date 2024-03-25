@@ -1,53 +1,56 @@
-/* *,
-*::after,
-*::before {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-} */
-
-/* header styles */
 h1 {
   padding-top: 40px;
   padding-bottom: 25px;
+  text-shadow: 0 0 4px;
 }
 
-/* button styles*/
 button {
   font: inherit;
   cursor: pointer;
-  border: none; 
+  border: none;
   text-align: left;
-  width: 50px; 
-  height: 50px; 
+  width: 50px;
+  height: 50px;
   border-radius: 25%;
-
+  color: rgba(255, 0, 0, 0.408);
 }
 
-/* input styles */
 input::placeholder {
   text-align: left;
-  font-size: 20px;
+  font-size: 25px;
   padding-left: 15px;
+  color: rgba(97, 140, 122, 0.647);
+  font-family: monospace;
 }
 
 input[type="text"] {
   text-align: left;
-  border-radius: 8px;
+  border-radius: 20px;
   border: none;
-  background-color: gainsboro;
+  background-color: transparent;
+  border: solid rgb(50, 35, 66);
+  border-width: 5px;
+  padding-left: 15px;
+  font-size: 25px;
+  transition: box-shadow 0.3s ease;
+  margin-bottom: 30px;
+  margin-right: 20px;
+}
+
+input[type="text"]:hover {
+  background-color: rgba(150, 216, 188, 0.839);
+  box-shadow: 0 0 20px rgba(88, 199, 224, 0.945);
+  border-color: rgba(150, 216, 188, 0.839);
 }
 
 .input {
   margin-right: 10px;
   height: 50px;
-  width:350px ;
+  width: 350px;
   border-radius: 15px;
 }
 
-/* wrapper class */
 .wrapper {
-  display: flex; 
+  display: flex;
   justify-content: center;
 }
